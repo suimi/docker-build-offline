@@ -2,7 +2,7 @@ FROM golang:1.18-alpine3.16
 
 COPY ./apk/* /tmp/
 
-RUN apk add --allow-untrusted --no-network --no-cache \
+RUN apk add --allow-untrusted --no-network --no-cache --repositories-file=/dev/null \
         /tmp/bash-5.1.16-r2.apk \
         /tmp/binutils-2.38-r3.apk \
         /tmp/binutils-gold-2.38-r3.apk \
